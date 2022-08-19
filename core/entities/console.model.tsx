@@ -1,6 +1,8 @@
 export interface Console {
   id: number
   name: string
-  slug: string
-  image: string
+  image_url: string
+  released_date: Date
 }
+
+export default Console

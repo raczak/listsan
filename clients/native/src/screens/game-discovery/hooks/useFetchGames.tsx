@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Game from "../../../../../core/entities/game.model"
+import Game from "../../../../../../core/entities/game.model"
 
 // Fonction à modifier pour extraire la fonction fetchGames de useFetchGames
 export function useFetchGames(): Game[] {
