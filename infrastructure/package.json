@@ -1,0 +1,9 @@
+{
+  "name": "listsan-infra",
+  "version": "1.0.0",
+  "description": "provide data for games, console and shops from many APIs in internet",
+  "main": "index.ts",
+  "author": "raczak",
+  "license": "MIT",
+  "private": true
+}
