@@ -1,4 +1,4 @@
-export interface Console {
+export class Console {
   id: number
   name: string
   image_url: string

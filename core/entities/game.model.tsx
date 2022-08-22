@@ -1,7 +1,17 @@
-export interface Game {
+import { Clip, Genre, IGame, PlatformElement, Rating, ShortScreenshot, Store } from "./igame.model"
+
+export class Game implements IGame {
   id: number
-  slug: string
   name: string
+  affiliate_url: string
+  image_url: string
+  constructor(id: number, name: string, affiliate_url: string, image_url: string) {
+    this.id = id
+    this.name = name
+    this.affiliate_url = affiliate_url
+    this.image_url = image_url
+  }
+  slug: string
   released: string
   background_image: string
   rating: number
@@ -17,74 +27,6 @@ export interface Game {
   clip: Clip | null
   tags: Genre[]
   short_screenshots: ShortScreenshot[]
-}
-
-export interface Genre {
-  id: number
-  name: string
-  slug: string
-  games_count: number
-  image_background: string
-  domain?: string
-  language?: Language
-}
-
-export interface Clip {
-  clip: string
-  clips: { [key: string]: string }
-  video: string
-  preview: string
-}
-
-export enum Language {
-  Eng = "eng",
-}
-
-export interface PlatformElement {
-  platform: PlatformPlatform
-  released_at: string
-  requirements_en: Requirements | null
-  requirements_ru: Requirements | null
-}
-
-export interface Requirements {
-  minimum: string
-  recommended?: string
-}
-
-export interface PlatformPlatform {
-  id: number
-  name: string
-  slug: string
-  image: null
-  year_end: null
-  year_start: number | null
-  games_count: number
-  image_background: string
-}
-
-export interface Store {
-  id: number
-  store: Genre
-}
-
-export interface ShortScreenshot {
-  id: number
-  image: string
-}
-
-export interface Rating {
-  id: number
-  title: Title
-  count: number
-  percent: number
-}
-
-export enum Title {
-  Exceptional = "exceptional",
-  Meh = "meh",
-  Recommended = "recommended",
-  Skip = "skip",
 }
 
 export default Game

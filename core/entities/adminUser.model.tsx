@@ -1,6 +1,6 @@
 import User from "./user.model"
 
-interface adminUser extends User {
+class adminUser extends User {
   admin: boolean
 }
 
