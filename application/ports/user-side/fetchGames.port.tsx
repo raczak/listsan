@@ -1,4 +1,4 @@
-import Game from "../../entities/game.model"
+import Game from "../../core/entities/game.model"
 
 export interface FetchGamesPort {
   getGames: () => Promise<Game[]>
