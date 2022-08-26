@@ -1,24 +1,24 @@
 export class Game {
-  id: number
-  name: string
-  affiliate_url: string
-  image_url: string
-  slug: string
-  released: string
-  background_image: string
-  rating: number
-  rating_top: number
-  ratings: Rating[]
-  metacritic: number | null
-  playtime: number
-  updated: string
-  reviews_count: number
-  platforms: PlatformElement[]
-  genres: Genre[]
-  stores: Store[]
-  clip: Clip | null
-  tags: Genre[]
-  short_screenshots: ShortScreenshot[]
+  id!: number
+  name!: string
+  affiliate_url!: string
+  image_url!: string
+  slug!: string
+  released!: string
+  background_image!: string
+  rating!: number
+  rating_top!: number
+  ratings!: Rating[]
+  metacritic!: number | null
+  playtime!: number
+  updated!: string
+  reviews_count!: number
+  platforms!: PlatformElement[]
+  genres!: Genre[]
+  stores!: Store[]
+  clip!: Clip | null
+  tags!: Genre[]
+  short_screenshots!: ShortScreenshot[]
 }
 
 export interface Genre {

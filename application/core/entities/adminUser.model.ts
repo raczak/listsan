@@ -1,7 +1,7 @@
 import User from "./user.model"
 
 class adminUser extends User<adminUser> {
-  acl: acl
+  acl: acl | undefined
 }
 
 interface acl {

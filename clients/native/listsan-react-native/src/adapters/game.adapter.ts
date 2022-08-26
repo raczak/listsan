@@ -8,9 +8,9 @@ export default class GameAdapter implements FetchGamesPort {
     this.core = core
   }
   async getGames(): Promise<Game[]> {
-    return this.core.apiAdapter.provideGames()
+    return this.core.gameAdapter.provideGames()
   }
   async getGamesById(id: string): Promise<Game[]> {
-    return this.core.apiAdapter.provideGamesById(id)
+    return this.core.gameAdapter.provideGamesById(id)
   }
 }

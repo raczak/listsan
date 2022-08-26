@@ -3,10 +3,11 @@ import User from "../../../application/core/entities/user.model"
 import { Http } from "../../../application/ports/http"
 import IObtainGamesPort from "../../../application/ports/server-side/obtainGames.port"
 
-export class GameApiAdapter implements IObtainGamesPort {
+export default class GameApiAdapter implements IObtainGamesPort {
   constructor() {}
-  provideGames: () => Promise<Game[]>
-  provideGamesById: (id: string) => Promise<Game[]>
+  provideGames!: () => Promise<Game[]>
+  provideGamesById!: (id: string) => Promise<Game[]>
+
   getFavoriteGames(): Promise<Game[]> {
     throw new Error("Method not implemented.")
   }

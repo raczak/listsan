@@ -2,7 +2,7 @@ import User from "../../../../../application/core/entities/user.model"
 import ListSan from "../../../../../application/core/main"
 import FetchUsersPort from "../../../../../application/ports/user-side/fetchUsers.port"
 
-export default class userAdapter implements FetchUsersPort {
+export default class UserAdapter implements FetchUsersPort {
   core: ListSan
   constructor(core: ListSan) {
     this.core = core
