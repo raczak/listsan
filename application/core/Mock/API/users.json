@@ -1,1 +1,26 @@
-{"id": 22, "pseudo": "toto", "preferences": {"console":["PS5"], "game": ["God of War"]}, "email": {"email":"toto@gmail.com", "verified": true}, "role": "admin", "favoriteGames": ["Spider Man"]}
+{
+  "0": {
+    "id": 22,
+    "pseudo": "toto",
+    "preferences": { "console": ["PS5"], "game": ["God of War"] },
+    "email": { "email": "toto@gmail.com", "verified": true },
+    "role": "admin",
+    "favoriteGames": ["Spider Man"]
+  },
+  "1": {
+    "id": 22,
+    "pseudo": "toto",
+    "preferences": { "console": ["PS5"], "game": ["God of War"] },
+    "email": { "email": "toto@gmail.com", "verified": true },
+    "role": "admin",
+    "favoriteGames": ["Spider Man"]
+  },
+  "2": {
+    "id": 22,
+    "pseudo": "toto",
+    "preferences": { "console": ["PS5"], "game": ["God of War"] },
+    "email": { "email": "toto@gmail.com", "verified": true },
+    "role": "admin",
+    "favoriteGames": ["Spider Man"]
+  }
+}

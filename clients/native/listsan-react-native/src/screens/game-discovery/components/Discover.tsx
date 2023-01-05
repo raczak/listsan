@@ -1,18 +1,15 @@
 import React from "react"
-import { View, Text, StatusBar, StyleSheet, FlatList } from "react-native";
-import { useFetchGames } from "../hooks/useFetchGames";
+import { View, Text, StatusBar, StyleSheet, FlatList } from "react-native"
+import { useFetchGames } from "../hooks/useFetchGames"
 
 export function Discover() {
-  const games = useFetchGames();
+  const games = useFetchGames()
   return (
     <View style={styles.container}>
       <StatusBar />
-      <FlatList
-        data={games}
-        renderItem={({ item }) => <Text>{item.name}</Text>}
-      />
+      <FlatList data={games} renderItem={({ item }) => <Text>{item.name}</Text>} />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -22,4 +19,4 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-});
+})

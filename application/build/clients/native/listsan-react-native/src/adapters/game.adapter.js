@@ -11,16 +11,22 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 class GameAdapter {
     constructor(core) {
-        this.core = core;
+        GameAdapter.core = core;
+    }
+    static getInstance() {
+        if (!GameAdapter.instance) {
+            GameAdapter.instance = new GameAdapter(GameAdapter.core);
+        }
+        return GameAdapter.instance;
     }
     getGames() {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.core.gameAdapter.provideGames();
+            return GameAdapter.core.gameAdapter.provideGames();
         });
     }
     getGamesById(id) {
         return __awaiter(this, void 0, void 0, function* () {
-            return this.core.gameAdapter.provideGamesById(id);
+            return GameAdapter.core.gameAdapter.provideGamesById(id);
         });
     }
 }

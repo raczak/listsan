@@ -7,6 +7,7 @@ const gameApi_adapter_1 = __importDefault(require("../infrastructure/rawg.io/ada
 const game_adapter_1 = __importDefault(require("../clients/native/listsan-react-native/src/adapters/game.adapter"));
 const user_adapter_1 = __importDefault(require("../clients/native/listsan-react-native/src/adapters/user.adapter"));
 const main_1 = __importDefault(require("./core/main"));
+// import UserApiAdapter2 from "@lib/adapters/user.adapter"
 const userApi_adapter_1 = __importDefault(require("../infrastructure/firebase/adapters/userApi.adapter"));
 class AppService {
     static Main() {

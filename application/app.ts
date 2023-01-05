@@ -6,6 +6,7 @@ import IObtainUsersPort from "./ports/server-side/obtainUsers.port"
 import FetchGamesPort from "./ports/user-side/fetchGames.port"
 import FetchUsersPort from "./ports/user-side/fetchUsers.port"
 import ListSan from "./core/main"
+// import UserApiAdapter2 from "@lib/adapters/user.adapter"
 import UserApiAdapter from "../infrastructure/firebase/adapters/userApi.adapter"
 
 class AppService {

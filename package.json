@@ -1,0 +1,23 @@
+{
+  "name": "listsan",
+  "version": "1.0.0",
+  "description": "ListSan une App **100% française** vous permettant de ***suivre*** vos Jeux Video en cours ou que vous souhaiter faire. ListSan met également à votre disposition **le prix le plus bas pour chaque jeux via un comparateur maison !**",
+  "main": "./application/build/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raczak/listsan.git"
+  },
+  "author": "raczak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raczak/listsan/issues"
+  },
+  "homepage": "https://github.com/raczak/listsan#readme",
+  "devDependencies": {
+    "nx": "14.5.10",
+    "@nrwl/nx-cloud": "latest"
+  }
+}
