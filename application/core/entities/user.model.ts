@@ -1,12 +1,17 @@
-import Game from "./game.model"
+import Game from './game.model'
 
 // <userType = undefined> allow me to different type of users: like admin so "User<adminUser>"
-export class User<userType = undefined> {
+export default class User<userType = undefined> {
   id!: number
+
   pseudo!: string
+
   email?: Email
+
   favoriteGames!: Game[]
+
   preferences!: Preferences
+
   userType!: userType
 }
 
@@ -27,5 +32,3 @@ interface Notification {
   email_frequency: string
   push_frequency: string
 }
-
-export default User

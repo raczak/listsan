@@ -1,24 +1,47 @@
-export class Game {
+export default class Game {
   id!: number
+
   name!: string
+
   affiliate_url!: string
+
   image_url!: string
+
   slug!: string
+
   released!: string
+
   background_image!: string
+
   rating!: number
+
   rating_top!: number
+
   ratings!: Rating[]
+
   metacritic!: number | null
+
   playtime!: number
+
   updated!: string
+
   reviews_count!: number
+
   platforms!: PlatformElement[]
+
   genres!: Genre[]
+
   stores!: Store[]
+
   clip!: Clip | null
+
   tags!: Genre[]
+
   short_screenshots!: ShortScreenshot[]
+}
+
+export enum Language {
+  Eng = 'eng'
 }
 
 export interface Genre {
@@ -36,10 +59,6 @@ export interface Clip {
   clips: { [key: string]: string }
   video: string
   preview: string
-}
-
-export enum Language {
-  Eng = "eng",
 }
 
 export interface PlatformElement {
@@ -83,10 +102,8 @@ export interface Rating {
 }
 
 export enum Title {
-  Exceptional = "exceptional",
-  Meh = "meh",
-  Recommended = "recommended",
-  Skip = "skip",
+  Exceptional = 'exceptional',
+  Meh = 'meh',
+  Recommended = 'recommended',
+  Skip = 'skip'
 }
-
-export default Game

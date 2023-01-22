@@ -1,4 +1,4 @@
-import Console from "../entities/console.model"
-import IItemRepository from "./item.repository"
+import Console from '../entities/console.model'
+import IItemRepository from './item.repository'
 
-export interface ConsoleRepository extends IItemRepository<Console, Number> {}
+export type ConsoleRepository = IItemRepository<Console, number>

@@ -1,8 +1,6 @@
-import User from "../../core/entities/user.model"
+import User from '../../core/entities/user.model'
 
-export interface IObtainUsersPort {
+export default interface IObtainUsersPort {
   provideUsers: () => Promise<User[]>
   provideUsersById: (id: number) => Promise<User[]>
 }
-
-export default IObtainUsersPort

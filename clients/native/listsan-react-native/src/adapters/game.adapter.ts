@@ -17,8 +17,8 @@ export default class GameAdapter implements FetchGamesPort {
     return GameAdapter.instance
   }
 
-  async getGames(): Promise<Game[]> {
-    return GameAdapter.core.gameAdapter.provideGames()
+  async getGames(): Promise<Game[]> {    
+    return GameAdapter.core.gameAdapter.getBestps5Games()
   }
 
   async getGamesById(id: string): Promise<Game[]> {

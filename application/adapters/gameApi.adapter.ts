@@ -1,8 +1,8 @@
 import axios from 'axios'
-import Game from '@listsan/app/core/entities/game.model'
-import User from '@listsan/app/core/entities/user.model'
-import { Http } from '@listsan/app/ports/http'
-import IObtainGamesPort from '@listsan/app/ports/server-side/obtainGames.port'
+import Game from '../core/entities/game.model'
+import User from '../core/entities/user.model'
+import { Http } from '../ports/http'
+import IObtainGamesPort from '../ports/server-side/obtainGames.port'
 import AuthService from '../services/auth'
 
 export default class GameApiAdapter implements IObtainGamesPort {

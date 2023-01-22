@@ -1,4 +1,4 @@
-import User from "./user.model"
+import User from './user.model'
 
 class adminUser extends User<adminUser> {
   acl: acl | undefined
