@@ -1,10 +1,10 @@
-import React from "react"
-import { StatusBar } from "expo-status-bar"
-import { NavigationContainer } from "@react-navigation/native"
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { Discover } from "./src/screens/game-discovery/components/Discover"
-import { MyGames } from "./src/screens/my-games/MyGames"
-import { MyConsoles } from "./src/screens/my-consoles/MyConsoles"
+import React from 'react'
+import { StatusBar } from 'expo-status-bar'
+import { NavigationContainer } from '@react-navigation/native'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { Discover } from './src/screens/game-discovery/components/Discover'
+import MyGames from './src/screens/my-games/MyGames'
+import { MyConsoles } from './src/screens/my-consoles/MyConsoles'
 
 const Tab = createBottomTabNavigator()
 

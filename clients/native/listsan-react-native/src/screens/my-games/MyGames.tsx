@@ -1,12 +1,11 @@
-import React, { useEffect } from "react"
-import { StatusBar, View, Text, StyleSheet } from "react-native"
-import { AppService } from "@listsan/app"
+import React, { useEffect } from 'react'
+import { StatusBar, View, Text, StyleSheet } from 'react-native'
+import  AppService  from '../../../../../../application/build/application/app'
 
-export function MyGames() {
+export default function MyGames() {
   useEffect(() => {
-    const games =  AppService.Main.getGameAdapterInstance()
-    console.log(games);
-    
+    const games = new AppService().getGameAdapterInstance()
+    console.log(games.getGames())
   }, [])
 
   return (
@@ -20,8 +19,8 @@ export function MyGames() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 })

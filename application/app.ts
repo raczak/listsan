@@ -1,11 +1,11 @@
-import UserApiAdapter from './adapters/userApi.adapter'
-import GameApiAdapter from './adapters/gameApi.adapter'
-import NativeUIGameAdapter from './adapters/game.adapter'
-import NativeUIUserAdapter from './adapters/user.adapter'
-import IObtainGamesPort from './ports/server-side/obtainGames.port'
-import IObtainUsersPort from './ports/server-side/obtainUsers.port'
-import FetchGamesPort from './ports/user-side/fetchGames.port'
-import FetchUsersPort from './ports/user-side/fetchUsers.port'
+import UserApiAdapter from './adapters/driven/userApi.adapter'
+import GameApiAdapter from './adapters/driven/gameApi.adapter'
+import NativeUIGameAdapter from './adapters/driving/game.adapter'
+import NativeUIUserAdapter from './adapters/driving/user.adapter'
+import IObtainGamesPort from './ports/driven/obtainGames.port'
+import IObtainUsersPort from './ports/driven/obtainUsers.port'
+import FetchGamesPort from './ports/driving/fetchGames.port'
+import FetchUsersPort from './ports/driving/fetchUsers.port'
 import ListSan from './core/main'
 
 export default class AppService {
@@ -25,6 +25,7 @@ export default class AppService {
     // Exposer ici les features que je veux soumettre à l'UI ?
   }
 
+  // 4. Instantiate left-side adapter(s) ("I want ask/to go inside the hexagon")
   // Les instances API sont exposées, pour une utilisation dans un framework front
   getGameAdapterInstance(): FetchGamesPort {
     const nativeUIGameAdapter: FetchGamesPort = new NativeUIGameAdapter(

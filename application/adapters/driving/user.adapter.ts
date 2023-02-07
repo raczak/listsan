@@ -1,6 +1,6 @@
-import User from '../core/entities/user.model'
-import ListSan from '../core/main'
-import FetchUsersPort from '../ports/user-side/fetchUsers.port'
+import User from '../../core/entities/user.model'
+import ListSan from '../../core/main'
+import FetchUsersPort from '../../ports/driving/fetchUsers.port'
 
 export default class UserAdapter implements FetchUsersPort {
   core: ListSan

@@ -1,8 +1,8 @@
-import Game from '../core/entities/game.model'
-import FetchGamesPort from '../ports/user-side/fetchGames.port'
-import ListSan from '../core/main'
+import Game from '../../core/entities/game.model'
+import IFetchGamesPort from '../../ports/driving/fetchGames.port'
+import ListSan from '../../core/main'
 
-export default class GameAdapter implements FetchGamesPort {
+export default class GameAdapter implements IFetchGamesPort {
   private static instance: GameAdapter
 
   private core: ListSan

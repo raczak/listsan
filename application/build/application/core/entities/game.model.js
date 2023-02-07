@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Title = exports.Language = exports.Game = void 0;
+exports.Title = exports.Language = void 0;
 class Game {
 }
-exports.Game = Game;
+exports.default = Game;
 var Language;
 (function (Language) {
     Language["Eng"] = "eng";
@@ -15,4 +15,3 @@ var Title;
     Title["Recommended"] = "recommended";
     Title["Skip"] = "skip";
 })(Title = exports.Title || (exports.Title = {}));
-exports.default = Game;
