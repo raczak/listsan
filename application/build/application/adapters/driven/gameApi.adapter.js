@@ -15,34 +15,50 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = __importDefault(require("axios"));
 // import AuthService from '../services/auth'
 class GameApiAdapter {
-    constructor() { }
+    constructor(apiConfig) {
+        this.access_token = '';
+        this.client_id = '';
+        this.apiConfig = apiConfig;
+        this.corsAPIURL = '';
+    }
     getFavoriteGames() {
-        throw new Error('Method not implemented.');
+        return __awaiter(this, void 0, void 0, function* () {
+            this.access_token = '';
+            this.client_id = '';
+            this.corsAPIURL = '';
+            // Code ici
+        });
     }
     removeFavoriteGames(favoriteGamesToRemove, user) {
-        throw new Error('Method not implemented.');
+        return __awaiter(this, void 0, void 0, function* () {
+            this.access_token = '';
+            this.client_id = '';
+            this.corsAPIURL = '';
+        });
     }
     addFavoriteGames(favoriteGamesToAdd, user) {
-        throw new Error('Method not implemented.');
+        return __awaiter(this, void 0, void 0, function* () {
+            this.access_token = '';
+            this.client_id = '';
+            this.corsAPIURL = '';
+        });
     }
     getBestps5Games() {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('lolollo');
-            // const token = '1e1e4261198043149952843804fbbf66'
-            // await AuthService.getToken()
-            const auth = yield axios_1.default.post('https://id.twitch.tv/oauth2/token?client_id=lrfyt3y7lw1ygbs0gq60cescdxgamp&client_secret=pkyv33qogabm0rdpo6j5ps8vrhzajf&grant_type=client_credentials');
-            // add corss origin
-            const { access_token } = auth.data;
-            this.access_token = access_token;
-            const headers = {
-                Authorization: `Bearer ${this.access_token}`,
-                Client_ID: this.client_id,
-                Body: 'fields *;',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'privatekey'
-            };
-            const response = yield axios_1.default.post(`https://cors-anywhere.herokuapp.com/{https://api.igdb.com/v4/games}`);
-            console.log(response);
+            const { accessTokenURL, dataAPIURL, dataFields, authHeaders, corsAPIURL } = this.apiConfig;
+            const tokenResponse = yield axios_1.default.post(accessTokenURL || '');
+            this.access_token = tokenResponse.data.access_token;
+            this.client_id = authHeaders['Client-ID'];
+            this.corsAPIURL = corsAPIURL;
+            const response = yield axios_1.default.post(corsAPIURL, {
+                accessTokenURL,
+                dataAPIURL,
+                dataFields,
+                authHeaders: {
+                    Authorization: `Bearer ${this.access_token}`,
+                    'Client-ID': this.client_id
+                }
+            });
             return response.data.results;
         });
     }

@@ -4,7 +4,7 @@ import  AppService  from '../../../../../../application/build/application/app'
 
 export default function MyGames() {
   useEffect(() => {
-    const games = new AppService().getGameAdapterInstance()
+    const games = new AppService('igdb').getGameAdapterInstance()
     console.log(games.getGames())
   }, [])
 
