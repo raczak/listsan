@@ -1,54 +1,59 @@
-# ListSan
+# Projet ListSan
 
-ListSan une App **100% française** vous permettant de ***suivre*** vos Jeux Video en cours ou que vous souhaiter faire. ListSan met également à votre disposition **le prix le plus bas pour chaque jeux via un comparateur maison !**
+ListSan est un projet qui suit une architecture hexagonale. Il est conçu pour fournir des informations sur les jeux et gérer les préférences des utilisateurs.
 
-ListSan est construit selon les principes d'architecture hexagonal. Cela signifie que chaque composant est développé séparément et qu'il n'y a pas de couplage entre les composants. Ainsi chaque composant est simple, efficace et performant.
-Vous vous en douté bien, le travail sur cette app a été collosal. Plusieurs centaines d'heures ont été investi pour la réalisation de cette application sur mon temps libre (et oui j'ai un métier en parrallèle) et **j'en suis le seul dévelopeur. Si vous souhaiter soutenir votre serviteur, vous pouvez me faire un don via ce lien pour aider l'app à rester gratuite !**
+## Architecture
 
-## Installation
+Le projet est divisé en trois dossiers principaux reflétant l'architecture hexagonale :
 
-### Installer via lerna toute l'application
+### 1. Application
 
-L'installation se fera en cascade via lerna.
+C'est le cœur du domaine métier. Il contient :
 
-```bash
-lerna install listsan
-```
+- **Entités** :
+  - `adminUser.model.ts`
+  - `console.model.ts`
+  - `game.model.ts`
+  - `offer.model.ts`
+  - `shop.model.ts`
+  - `user.model.ts`
 
-L'app installera donc dans l'ordre :
+- **Fonctionnalités** :
+  - `getCheapestGamePrices.feature.ts`
+  - `favoriteGames.feature.ts`
+  - `userPreferences.feature.ts`
 
-- le Core/Domain (contient la business logic)
-- le Server-side (contient les frameworks et éléments d'infrastructure)
-- le Client-side (contient les frameworks et élements d'affichage)
+- **Adaptateurs** :
+  - `gameApi.adapter.ts`
+  - `userApi.adapter.ts`
 
-### Installer le
+### 2. Clients
 
-## Usage
+Il contient les interfaces utilisateur :
 
-```bash
-listsan
-```
+- **React Native** (`listsan-react-native`) : Application mobile.
+  - Adaptateurs : `game.adapter.ts` et `user.adapter.ts`
 
-## Auteur
+- **Vue.js** (`listsan-vuejs`) : Application web.
 
-```bash
-listsan --author
-```
+### 3. Infrastructure
 
-## Licence
+Il gère les interactions avec les sources de données externes :
 
-```bash
-listsan --license
-```
+- **Firebase** :
+  - `userApi.adapter.ts`
 
-## Contributeurs
+- **Rawg.io** :
+  - `gameApi.adapter.ts`
 
-```bash
-listsan --contributors
-```
+## Fonctionnement
 
-## Aide
+- Le domaine métier (`application`) définit les entités, les fonctionnalités et les adaptateurs.
+  
+- Les clients (`clients`) utilisent ces adaptateurs pour interagir avec le domaine métier.
 
-```bash
-listsan --help
-```
+- L'infrastructure (`infrastructure`) fournit les détails de mise en œuvre pour les sources de données externes.
+
+## Remarques
+  
+- Les fichiers `package.json` dans chaque dossier fournissent des détails sur la configuration et les scripts.
